@@ -32,7 +32,7 @@ veracode_sca_scan:
     branches_to_exclude:
       - branch-1
   pull_request:
-    trigger: true
+    trigger: false
     action:
       - opened
       - synchronize
@@ -41,7 +41,7 @@ veracode_sca_scan:
   break_build_on_error: false
   error_message: Veracode static scan faced a problem.
   issues:
-    trigger: false
+    trigger: true
     commands:
       - Veracode SCA Scan
 veracode_iac_secrets_scan:
